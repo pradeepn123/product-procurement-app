@@ -1,0 +1,57 @@
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-item.selected {
+  background: #007bff;
+  color: white;
+}
+
+.count-input {
+  width: 60px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+
+.count-input:disabled {
+  background-color: #e9ecef;
+  opacity: 0.6;
+}
+
+.final-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.final-table th,
+.final-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.final-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.thank-you-message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+}
