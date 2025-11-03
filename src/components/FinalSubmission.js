@@ -6,7 +6,7 @@ const FinalSubmission = ({ finalProducts, onFinalSubmission }) => {
     mobileNumber: '',
     email: ''
   });
-  const [showThankYou, setShowThankYou] = useState(false);
+  // const [showThankYou, setShowThankYou] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
@@ -48,7 +48,7 @@ const sendWhatsAppMessage = () => {
 
     // Set submitted state
     setSubmitted(true);
-    setShowThankYou(true);
+    // setShowThankYou(true);
     
     // Send WhatsApp message directly
     sendWhatsAppMessage();

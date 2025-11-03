@@ -30,13 +30,13 @@ const ProductSelection = ({ selectedProducts, onNavigate }) => {
     ));
   };
 
-  const handleCountChange = (productId, count) => {
-    setProducts(products.map(product => 
-      product.id === productId 
-        ? { ...product, count: Math.max(1, parseInt(count) || 1) }
-        : product
-    ));
-  };
+  // const handleCountChange = (productId, count) => {
+  //   setProducts(products.map(product => 
+  //     product.id === productId 
+  //       ? { ...product, count: Math.max(1, parseInt(count) || 1) }
+  //       : product
+  //   ));
+  // };
 
   const handleBookNow = () => {
     const selectedItems = products
