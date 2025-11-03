@@ -20,7 +20,7 @@ const ProductSelection = ({ selectedProducts, onNavigate }) => {
       });
       setProducts(updatedProducts);
     }
-  }, [selectedProducts]);
+  }, [selectedProducts, products]);
 
   const toggleProductSelection = (productId) => {
     setProducts(products.map(product => 
@@ -30,13 +30,13 @@ const ProductSelection = ({ selectedProducts, onNavigate }) => {
     ));
   };
 
-  // const handleCountChange = (productId, count) => {
-  //   setProducts(products.map(product => 
-  //     product.id === productId 
-  //       ? { ...product, count: Math.max(1, parseInt(count) || 1) }
-  //       : product
-  //   ));
-  // };
+  const handleCountChange = (productId, count) => {
+    setProducts(products.map(product => 
+      product.id === productId 
+        ? { ...product, count: Math.max(1, parseInt(count) || 1) }
+        : product
+    ));
+  };
 
   const handleBookNow = () => {
     const selectedItems = products
@@ -64,7 +64,7 @@ const ProductSelection = ({ selectedProducts, onNavigate }) => {
               onClick={() => toggleProductSelection(product.id)}
             >
               <span>{product.name}</span>
-              {/* <input
+              <input
                 type="number"
                 min="1"
                 value={product.count}
@@ -72,7 +72,7 @@ const ProductSelection = ({ selectedProducts, onNavigate }) => {
                 className="count-input"
                 disabled={!product.selected}
                 onClick={(e) => e.stopPropagation()}
-              /> */}
+              /> 
             </li>
           ))}
         </ul>
